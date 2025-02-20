@@ -7,47 +7,47 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 
 /**
- * 站点设置请求参数类
+ * Site Settings Request Parameters Class
  *
  * @author zhaojun
  */
 @Data
-@ApiModel(description = "站点设置请求参数类")
+@ApiModel(description = "Site Settings Request Parameters Class")
 public class UpdateSiteSettingRequest {
 
-	@ApiModelProperty(value = "站点名称", required = true, example = "ZFile Site Name")
-	@NotBlank(message = "站点名称不能为空")
+	@ApiModelProperty(value = "Site Name", required = true, example = "ZFile Site Name")
+	@NotBlank(message = "Site name cannot be empty")
 	private String siteName;
 
-	@ApiModelProperty(value = "站点域名", required = true, example = "https://zfile.vip")
-	@NotBlank(message = "站点域名不能为空")
+	@ApiModelProperty(value = "Site Domain", required = true, example = "https://zfile.vip")
+	@NotBlank(message = "Site domain cannot be empty")
 	private String domain;
 
-	@ApiModelProperty(value = "前端域名", notes = "前端域名，前后端分离情况下需要配置.", example = "http://xxx.example.com")
+	@ApiModelProperty(value = "Frontend Domain", notes = "Frontend domain, required when frontend and backend are separated.", example = "http://xxx.example.com")
 	private String frontDomain;
 
-	@ApiModelProperty(value = "头像地址", example = "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png")
+	@ApiModelProperty(value = "Avatar URL", example = "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png")
 	private String avatar;
 
-	@ApiModelProperty(value = "备案号", example = "冀ICP备12345678号-1")
+	@ApiModelProperty(value = "ICP Filing Number", example = "ICP 12345678-1")
 	private String icp;
 
-	@ApiModelProperty(value = "最大同时上传文件数", example = "5")
+	@ApiModelProperty(value = "Maximum Simultaneous File Uploads", example = "5")
 	private Integer maxFileUploads;
 
-	@ApiModelProperty(value = "站点 Home 名称", example = "xxx 的小站")
+	@ApiModelProperty(value = "Site Home Name", example = "xxx's Site")
 	private String siteHomeName;
 
-	@ApiModelProperty(value = "站点 Home Logo", example = "true")
+	@ApiModelProperty(value = "Site Home Logo", example = "true")
 	private String siteHomeLogo;
 
-	@ApiModelProperty(value = "站点 Logo 点击后链接", example = "https://www.zfile.vip")
+	@ApiModelProperty(value = "Site Logo Click Link", example = "https://www.zfile.vip")
 	private String siteHomeLogoLink;
 
-	@ApiModelProperty(value = "站点 Logo 链接打开方式", example = "_blank")
+	@ApiModelProperty(value = "Site Logo Link Target Mode", example = "_blank")
 	private String siteHomeLogoTargetMode;
 
-	@ApiModelProperty(value = "网站 favicon 图标地址", example = "https://www.example.com/favicon.ico")
+	@ApiModelProperty(value = "Website Favicon URL", example = "https://www.example.com/favicon.ico")
 	private String faviconUrl;
 
 }

@@ -6,21 +6,21 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 登陆安全设置请求参数类
+ * Login Security Settings Request Parameters Class
  *
  * @author zhaojun
  */
 @Data
-@ApiModel(description = "登陆安全设置请求参数类")
+@ApiModel(description = "Login Security Settings Request Parameters Class")
 public class UpdateSecuritySettingRequest {
 
-	@ApiModelProperty(value = "是否在前台显示登陆按钮", example = "true")
+	@ApiModelProperty(value = "Show Login Button in Frontend", example = "true")
 	private Boolean showLogin;
 
-	@ApiModelProperty(value = "登陆验证方式，支持验证码和 2FA 认证")
+	@ApiModelProperty(value = "Login Verification Mode, supports Captcha and 2FA authentication")
 	private LoginVerifyModeEnum loginVerifyMode;
 
-	@ApiModelProperty(value = "登陆验证 Secret")
+	@ApiModelProperty(value = "Login Verification Secret")
 	private String loginVerifySecret;
 
 }

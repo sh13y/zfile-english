@@ -6,48 +6,48 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 直链设置请求参数类
+ * Direct Link Settings Request Parameters Class
  *
  * @author zhaojun
  */
 @Data
-@ApiModel(description = "直链设置请求参数类")
+@ApiModel(description = "Direct Link Settings Request Parameters Class")
 public class UpdateLinkSettingRequest {
 
-	@ApiModelProperty(value = "是否记录下载日志", example = "true")
+	@ApiModelProperty(value = "Record Download Logs", example = "true")
 	private Boolean recordDownloadLog;
 
-	@ApiModelProperty(value = "直链 Referer 防盗链类型")
+	@ApiModelProperty(value = "Direct Link Referer Anti-Leech Type")
 	private RefererTypeEnum refererType;
 
-	@ApiModelProperty(value = "直链 Referer 是否允许为空")
+	@ApiModelProperty(value = "Allow Empty Referer for Direct Links")
 	private Boolean refererAllowEmpty;
 
-	@ApiModelProperty(value = "直链 Referer 值")
+	@ApiModelProperty(value = "Direct Link Referer Value")
 	private String refererValue;
 
-	@ApiModelProperty(value = "直链地址前缀")
+	@ApiModelProperty(value = "Direct Link URL Prefix")
 	private String directLinkPrefix;
 
-	@ApiModelProperty(value = "是否显示生成直链功能（含直链和路径短链）", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Link Button (Including Direct and Path Short Links)", example = "true", required = true)
 	private Boolean showLinkBtn;
 
-	@ApiModelProperty(value = "是否显示生成短链功能", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Short Link Feature", example = "true", required = true)
 	private Boolean showShortLink;
 
-	@ApiModelProperty(value = "是否显示生成路径链接功能", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Path Link Feature", example = "true", required = true)
 	private Boolean showPathLink;
 
-	@ApiModelProperty(value = "是否允许路径直链可直接访问", example = "true", required = true)
+	@ApiModelProperty(value = "Allow Anonymous Access to Path Links", example = "true", required = true)
 	private Boolean allowPathLinkAnonAccess;
 
-	@ApiModelProperty(value = "限制直链下载秒数", example = "_blank")
+	@ApiModelProperty(value = "Direct Link Download Time Limit (Seconds)", example = "_blank")
 	private Integer linkLimitSecond;
 
-	@ApiModelProperty(value = "限制直链下载次数", example = "_blank")
+	@ApiModelProperty(value = "Direct Link Download Count Limit", example = "_blank")
 	private Integer linkDownloadLimit;
 
-	@ApiModelProperty(value = "短链过期时间设置", example = "[{value: 1, unit: \"day\"}, {value: 1, unit: \"week\"}, {value: 1, unit: \"month\"}, {value: 1, unit: \"year\"}]")
+	@ApiModelProperty(value = "Short Link Expiration Time Settings", example = "[{value: 1, unit: \"day\"}, {value: 1, unit: \"week\"}, {value: 1, unit: \"month\"}, {value: 1, unit: \"year\"}]")
 	private String linkExpireTimes;
 
 }

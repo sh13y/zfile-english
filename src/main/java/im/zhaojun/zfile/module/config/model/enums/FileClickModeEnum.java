@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * 文件点击模式枚举, 用于控制文件是单击打开还是双击打开
+ * File click mode enumeration, used to control whether files are opened with single or double click
  *
  * @author zhaojun
  */
@@ -15,12 +15,12 @@ import lombok.Getter;
 public enum FileClickModeEnum {
 
 	/**
-	 * 单击打开文件/文件夹
+	 * Single click to open file/folder
 	 */
 	CLICK("click"),
 
 	/**
-	 * 双击打开文件/文件夹
+	 * Double click to open file/folder
 	 */
 	DBCLICK("dbclick");
 

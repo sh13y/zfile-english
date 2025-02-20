@@ -6,120 +6,120 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 全局站点设置响应类
+ * Global Site Settings Response Class
  *
  * @author zhaojun
  */
 @Data
-@ApiModel(value="全局站点设置响应类")
+@ApiModel(value="Global Site Settings Response Class")
 public class SiteConfigResult {
 
-	@ApiModelProperty(value = "是否已初始化", example = "true")
+	@ApiModelProperty(value = "Is Initialized", example = "true")
 	private Boolean installed;
 
-	@ApiModelProperty(value = "Debug 模式", example = "true", notes = "开启 debug 模式后，可重置管理员密码")
+	@ApiModelProperty(value = "Debug Mode", example = "true", notes = "When debug mode is enabled, administrator password can be reset")
 	private Boolean debugMode;
 
-	@ApiModelProperty(value = "直链地址前缀", example = "true", notes = "直链地址前缀, 如 http(s)://ip:port/${直链前缀}/path/filename")
+	@ApiModelProperty(value = "Direct Link URL Prefix", example = "true", notes = "Direct link URL prefix, e.g., http(s)://ip:port/${prefix}/path/filename")
 	private String directLinkPrefix;
 
-	@ApiModelProperty(value = "站点名称", example = "ZFile Site Name")
+	@ApiModelProperty(value = "Site Name", example = "ZFile Site Name")
 	private String siteName;
 
-	@ApiModelProperty(value = "备案号", example = "冀ICP备12345678号-1")
+	@ApiModelProperty(value = "ICP Filing Number", example = "ICP 12345678-1")
 	private String icp;
 
-	@ApiModelProperty(value = "站点域名(后端)", example = "https://zfile.vip", notes = "该值需配置为后端的站点域名，生成直链等操作需要此参数.")
+	@ApiModelProperty(value = "Site Domain (Backend)", example = "https://zfile.vip", notes = "This value must be configured as the backend site domain, required for generating direct links and other operations.")
 	private String domain;
 
-	@ApiModelProperty(value = "页面布局", notes = "full:全屏,center:居中", example = "full", required = true)
+	@ApiModelProperty(value = "Page Layout", notes = "full: Full Screen, center: Centered", example = "full", required = true)
 	private String layout;
 
-	@ApiModelProperty(value = "列表尺寸", notes = "large:大,default:中,small:小", example = "default", required = true)
+	@ApiModelProperty(value = "List Size", notes = "large: Large, default: Medium, small: Small", example = "default", required = true)
 	private String tableSize;
 
-	@ApiModelProperty(value = "是否显示生成直链功能（含直链和路径短链）", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Link Button (Including Direct and Path Short Links)", example = "true", required = true)
 	private Boolean showLinkBtn;
 
-	@ApiModelProperty(value = "是否显示生成短链功能", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Short Link Feature", example = "true", required = true)
 	private Boolean showShortLink;
 
-	@ApiModelProperty(value = "是否显示生成路径链接功能", example = "true", required = true)
+	@ApiModelProperty(value = "Show Generate Path Link Feature", example = "true", required = true)
 	private Boolean showPathLink;
 
-	@ApiModelProperty(value = "是否显示文档区", example = "true", required = true)
+	@ApiModelProperty(value = "Show Document Area", example = "true", required = true)
 	private Boolean showDocument;
 
-	@ApiModelProperty(value = "是否显示网站公告", example = "true", required = true)
+	@ApiModelProperty(value = "Show Website Announcement", example = "true", required = true)
 	private Boolean showAnnouncement;
 
-	@ApiModelProperty(value = "网站公告", example = "ZFile 网站公告")
+	@ApiModelProperty(value = "Website Announcement", example = "ZFile Website Announcement")
 	private String announcement;
 
-	@ApiModelProperty(value = "自定义 JS")
+	@ApiModelProperty(value = "Custom JS")
 	private String customJs;
 
-	@ApiModelProperty(value = "自定义 CSS")
+	@ApiModelProperty(value = "Custom CSS")
 	private String customCss;
 
-	@ApiModelProperty(value = "自定义视频文件后缀格式")
+	@ApiModelProperty(value = "Custom Video File Extensions")
 	private String customVideoSuffix;
 
-	@ApiModelProperty(value = "自定义图像文件后缀格式")
+	@ApiModelProperty(value = "Custom Image File Extensions")
 	private String customImageSuffix;
 
-	@ApiModelProperty(value = "自定义音频文件后缀格式")
+	@ApiModelProperty(value = "Custom Audio File Extensions")
 	private String customAudioSuffix;
 
-	@ApiModelProperty(value = "自定义文本文件后缀格式")
+	@ApiModelProperty(value = "Custom Text File Extensions")
 	private String customTextSuffix;
 
-	@ApiModelProperty(value = "根目录是否显示所有存储源", notes = "根目录是否显示所有存储源, 如果为 true, 则根目录显示所有存储源列表, 如果为 false, 则会自动跳转到第一个存储源.", example = "true", required = true)
+	@ApiModelProperty(value = "Show All Storage Sources in Root Directory", notes = "If true, displays all storage sources in root directory. If false, automatically redirects to the first storage source.", example = "true", required = true)
 	private Boolean rootShowStorage;
 
-	@ApiModelProperty(value = "前端域名", notes = "前端域名，前后端分离情况下需要配置.", example = "http://xxx.example.com")
+	@ApiModelProperty(value = "Frontend Domain", notes = "Frontend domain, required when frontend and backend are separated.", example = "http://xxx.example.com")
 	private String frontDomain;
 
-	@ApiModelProperty(value = "是否在前台显示登陆按钮", example = "true")
+	@ApiModelProperty(value = "Show Login Button in Frontend", example = "true")
 	private Boolean showLogin;
 
-	@ApiModelProperty(value = "默认文件点击习惯", example = "click")
+	@ApiModelProperty(value = "Default File Click Mode", example = "click")
 	private FileClickModeEnum fileClickMode;
 
-	@ApiModelProperty(value = "最大同时上传文件数", example = "5")
+	@ApiModelProperty(value = "Maximum Simultaneous File Uploads", example = "5")
 	private Integer maxFileUploads;
 
-	@ApiModelProperty(value = "onlyOffice 在线预览地址", example = "http://office.zfile.vip")
+	@ApiModelProperty(value = "OnlyOffice Online Preview URL", example = "http://office.zfile.vip")
 	private String onlyOfficeUrl;
 
-	@ApiModelProperty(value = "默认最大显示文件数", example = "1000")
+	@ApiModelProperty(value = "Default Maximum Files to Display", example = "1000")
 	private Integer maxShowSize;
 
-	@ApiModelProperty(value = "每次加载更多文件数", example = "50")
+	@ApiModelProperty(value = "Number of Files to Load More", example = "50")
 	private Integer loadMoreSize;
 
-	@ApiModelProperty(value = "默认排序字段", example = "name")
+	@ApiModelProperty(value = "Default Sort Field", example = "name")
 	private String defaultSortField;
 
-	@ApiModelProperty(value = "默认排序方向", example = "asc")
+	@ApiModelProperty(value = "Default Sort Order", example = "asc")
 	private String defaultSortOrder;
 
-	@ApiModelProperty(value = "站点 Home 名称", example = "xxx 的小站")
+	@ApiModelProperty(value = "Site Home Name", example = "xxx's Site")
 	private String siteHomeName;
 
-	@ApiModelProperty(value = "站点 Home Logo", example = "true")
+	@ApiModelProperty(value = "Site Home Logo", example = "true")
 	private String siteHomeLogo;
 
-	@ApiModelProperty(value = "站点 Logo 点击后链接", example = "https://www.zfile.vip")
+	@ApiModelProperty(value = "Site Logo Click Link", example = "https://www.zfile.vip")
 	private String siteHomeLogoLink;
 
-	@ApiModelProperty(value = "站点 Logo 链接打开方式", example = "_blank")
+	@ApiModelProperty(value = "Site Logo Link Target Mode", example = "_blank")
 	private String siteHomeLogoTargetMode;
 
-	@ApiModelProperty(value = "短链过期时间设置", example = "[{value: 1, unit: \"day\"}, {value: 1, unit: \"week\"}, {value: 1, unit: \"month\"}, {value: 1, unit: \"year\"}]")
+	@ApiModelProperty(value = "Short Link Expiration Time Settings", example = "[{value: 1, unit: \"day\"}, {value: 1, unit: \"week\"}, {value: 1, unit: \"month\"}, {value: 1, unit: \"year\"}]")
 	private String linkExpireTimes;
 
-	@ApiModelProperty(value = "是否默认记住密码", example = "true")
+	@ApiModelProperty(value = "Remember Password by Default", example = "true")
 	private Boolean defaultSavePwd;
 
 }

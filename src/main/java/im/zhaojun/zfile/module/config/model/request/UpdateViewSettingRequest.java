@@ -6,69 +6,69 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 显示设置请求参数类
+ * Display Settings Request Parameters Class
  *
  * @author zhaojun
  */
 @Data
-@ApiModel(description = "显示设置请求参数类")
+@ApiModel(description = "Display Settings Request Parameters Class")
 public class UpdateViewSettingRequest {
 
-	@ApiModelProperty(value = "根目录是否显示所有存储源", notes = "根目录是否显示所有存储源, 如果为 true, 则根目录显示所有存储源列表, 如果为 false, 则会自动跳转到第一个存储源.", example = "true", required = true)
+	@ApiModelProperty(value = "Show All Storage Sources in Root Directory", notes = "If true, displays all storage sources in root directory. If false, automatically redirects to the first storage source.", example = "true", required = true)
 	private Boolean rootShowStorage;
 
-	@ApiModelProperty(value = "页面布局", notes = "full:全屏,center:居中", example = "full", required = true)
+	@ApiModelProperty(value = "Page Layout", notes = "full: Full Screen, center: Centered", example = "full", required = true)
 	private String layout;
 
-	@ApiModelProperty(value = "列表尺寸", notes = "large:大,default:中,small:小", example = "default", required = true)
+	@ApiModelProperty(value = "List Size", notes = "large: Large, default: Medium, small: Small", example = "default", required = true)
 	private String tableSize;
 
-	@ApiModelProperty(value = "自定义视频文件后缀格式")
+	@ApiModelProperty(value = "Custom Video File Extensions")
 	private String customVideoSuffix;
 
-	@ApiModelProperty(value = "自定义图像文件后缀格式")
+	@ApiModelProperty(value = "Custom Image File Extensions")
 	private String customImageSuffix;
 
-	@ApiModelProperty(value = "自定义音频文件后缀格式")
+	@ApiModelProperty(value = "Custom Audio File Extensions")
 	private String customAudioSuffix;
 
-	@ApiModelProperty(value = "自定义文本文件后缀格式")
+	@ApiModelProperty(value = "Custom Text File Extensions")
 	private String customTextSuffix;
 
-	@ApiModelProperty(value = "是否显示文档区", example = "true", required = true)
+	@ApiModelProperty(value = "Show Document Area", example = "true", required = true)
 	private Boolean showDocument;
 
-	@ApiModelProperty(value = "是否显示网站公告", example = "true", required = true)
+	@ApiModelProperty(value = "Show Website Announcement", example = "true", required = true)
 	private Boolean showAnnouncement;
 
-	@ApiModelProperty(value = "网站公告", example = "ZFile 网站公告")
+	@ApiModelProperty(value = "Website Announcement", example = "ZFile Website Announcement")
 	private String announcement;
 
-	@ApiModelProperty(value = "自定义 CSS")
+	@ApiModelProperty(value = "Custom CSS")
 	private String customCss;
 
-	@ApiModelProperty(value = "自定义 JS")
+	@ApiModelProperty(value = "Custom JS")
 	private String customJs;
 
-	@ApiModelProperty(value = "默认文件点击习惯", example = "click")
+	@ApiModelProperty(value = "Default File Click Mode", example = "click")
 	private FileClickModeEnum fileClickMode;
 
-	@ApiModelProperty(value = "onlyOffice 在线预览地址", example = "http://office.zfile.vip")
+	@ApiModelProperty(value = "OnlyOffice Online Preview URL", example = "http://office.zfile.vip")
 	private String onlyOfficeUrl;
 
-	@ApiModelProperty(value = "默认最大显示文件数", example = "1000")
+	@ApiModelProperty(value = "Default Maximum Files to Display", example = "1000")
 	private Integer maxShowSize;
 
-	@ApiModelProperty(value = "每次加载更多文件数", example = "50")
+	@ApiModelProperty(value = "Number of Files to Load More", example = "50")
 	private Integer loadMoreSize;
 
-	@ApiModelProperty(value = "默认排序字段", example = "name")
+	@ApiModelProperty(value = "Default Sort Field", example = "name")
 	private String defaultSortField;
 
-	@ApiModelProperty(value = "默认排序方向", example = "asc")
+	@ApiModelProperty(value = "Default Sort Order", example = "asc")
 	private String defaultSortOrder;
 
-	@ApiModelProperty(value = "是否默认记住密码", example = "true")
+	@ApiModelProperty(value = "Remember Password by Default", example = "true")
 	private Boolean defaultSavePwd;
 
 }

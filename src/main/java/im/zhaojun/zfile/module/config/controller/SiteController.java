@@ -25,11 +25,11 @@ import javax.annotation.Resource;
 import javax.validation.Valid;
 
 /**
- * 站点基础模块接口
+ * Site Basic Module Controller
  *
  * @author zhaojun
  */
-@Api(tags = "站点基础模块")
+@Api(tags = "Site Basic Module")
 @ApiSort(1)
 @Slf4j
 @RequestMapping("/api/site")
@@ -46,7 +46,8 @@ public class SiteController {
 	private SystemConfigService systemConfigService;
 
 	@ApiOperationSupport(order = 1)
-	@ApiOperation(value = "获取站点全局设置", notes = "获取站点全局设置, 包括是否页面布局、列表尺寸、公告、配置信息")
+	@ApiOperation(value = "Get Global Site Settings", 
+				 notes = "Get global site settings, including page layout, list size, announcements, and configuration information")
 	@GetMapping("/config/global")
 	public AjaxJson<SiteConfigResult> globalConfig() {
 		SystemConfigDTO systemConfig = systemConfigService.getSystemConfig();
@@ -60,7 +61,8 @@ public class SiteController {
 
 
 	@ApiOperationSupport(order = 2)
-	@ApiOperation(value = "获取存储源设置", notes = "获取某个存储源的设置信息, 包括是否启用, 名称, 存储源类型, 存储源配置信息")
+	@ApiOperation(value = "Get Storage Source Settings", 
+				 notes = "Get settings for a specific storage source, including enabled status, name, storage type, and configuration information")
 	@PostMapping("/config/storage")
 	public AjaxJson<StorageSourceConfigResult> storageList(@Valid @RequestBody FileListConfigRequest fileListConfigRequest) {
 		StorageSourceConfigResult storageSourceConfigResult = storageSourceService.getStorageConfigSource(fileListConfigRequest);
@@ -70,7 +72,8 @@ public class SiteController {
 
 	@ResponseBody
 	@ApiOperationSupport(order = 3)
-	@ApiOperation(value = "重置管理员密码", notes = "开启 debug 模式时，访问此接口会强制将管理员账户密码修改为 admin 123456, 并修改登录验证方式为图片验证码, 详见：https://docs.zfile.vip/#/question?id=reset-pwd")
+	@ApiOperation(value = "Reset Administrator Password", 
+				 notes = "When debug mode is enabled, accessing this API will force change the administrator account password to 'admin 123456' and change the login verification method to image verification code. For details, see: https://docs.zfile.vip/#/question?id=reset-pwd")
 	@GetMapping("/reset-password")
 	public AjaxJson<?> resetPwd() {
 		systemConfigService.resetAdminLoginInfo();

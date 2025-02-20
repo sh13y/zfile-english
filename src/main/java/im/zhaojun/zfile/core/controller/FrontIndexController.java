@@ -15,7 +15,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 /**
- * 处理前端首页 Controller
+ * Front-end Index Page Controller
  *
  * @author zhaojun
  */
@@ -27,15 +27,15 @@ public class FrontIndexController {
 
 
 	/**
-	 * 所有未找到的页面都跳转到首页, 用户解决 vue history 直接访问 404 的问题
-	 * 同时, 读取 index.html 文件, 修改 title 和 favicon 后返回.
+	 * Redirect all pages not found to the index page to solve the vue history direct access 404 issue.
+	 * Also, read the index.html file, modify the title and favicon before returning.
 	 *
-	 * @return  转发到 /index.html
+	 * @return Forward to /index.html
 	 */
 	@RequestMapping(value = {"/**/{[path:[^\\.]*}", "/"})
 	@ResponseBody
 	public String redirect() throws IOException {
-		// 读取 resources/static/index.html 文件修改 title 和 favicon 后返回
+		// Read resources/static/index.html file, modify title and favicon before returning
 		ClassPathResource resource = new ClassPathResource("static/index.html");
 		InputStream inputStream = resource.getInputStream();
 		String content = IOUtils.toString(inputStream, StandardCharsets.UTF_8);

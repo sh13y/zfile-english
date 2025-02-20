@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * 登陆验证方式枚举
+ * Login Verification Mode Enumeration
  *
  * @author zhaojun
  */
@@ -15,17 +15,17 @@ import lombok.Getter;
 public enum LoginVerifyModeEnum {
 
 	/**
-	 * 不启用登陆模式
+	 * Login Mode Disabled
 	 */
 	OFF_MODE("off"),
 
 	/**
-	 * 图形验证码模式
+	 * Image Captcha Mode
 	 */
 	IMG_VERIFY_MODE("image"),
 
 	/**
-	 * 图形验证码模式
+	 * Two-Factor Authentication Mode
 	 */
 	TWO_FACTOR_AUTHENTICATION_MODE("2fa");
 

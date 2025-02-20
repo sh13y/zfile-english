@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * Referer 防盗链类型枚举
+ * Referer Anti-Leech Type Enumeration
  *
  * @author zhaojun
  */
@@ -15,17 +15,17 @@ import lombok.Getter;
 public enum RefererTypeEnum {
 
 	/**
-	 * 不启用 Referer 防盗链
+	 * Disable Referer Anti-Leech
 	 */
 	OFF("off"),
 
 	/**
-	 * 启用白名单模式
+	 * Enable Whitelist Mode
 	 */
 	WHITE_LIST("white_list"),
 
 	/**
-	 * 启用黑名单模式
+	 * Enable Blacklist Mode
 	 */
 	BLACK_LIST("black_list");
 
