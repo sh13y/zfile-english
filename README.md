@@ -59,20 +59,18 @@ Please refer to the deployment documentation: [https://docs.zfile.vip](https://d
 ## Support the Project
 
 ### Original Author
-If this project has helped you, please consider buying the original author a coffee. After all, coding fuels are essential! ☕
+If this project has helped you, please consider buying the original author a coffee. After all, coding fuels are essential!
 
 <img src="https://cdn.jun6.net/2021/03/27/152704e91f13d.png" width="400" alt="Support Original Author">
 
 ### English Translation
-Did the English translation save your day? The translator runs on coffee too! 🚀
+Found the English translation helpful? Your support keeps the translations coming! ☕
 
-Fun fact: This translation was powered by approximately 42 cups of coffee, 3 sleepless nights, and an unhealthy obsession with proper grammar. 
+If you'd like to show your appreciation:
+- [Buy me a coffee](https://buymeacoffee.com/shiey) ☕
+- [Support me on Ko-fi](https://ko-fi.com/shiey) 🎯
 
-If you found the translation helpful, you can:
-- [Buy me a coffee](https://buymeacoffee.com/shiey) ☕ (Because sleep is overrated anyway)
-- [Support me on Ko-fi](https://ko-fi.com/shiey) 🎯 (Ko-fi sounds like coffee, coincidence? I think not!)
-
-Remember: Every coffee you buy adds one more semicolon in the right place! 
+Your support helps maintain and improve the English translation. Thank you! 
 
 ## Status
 
